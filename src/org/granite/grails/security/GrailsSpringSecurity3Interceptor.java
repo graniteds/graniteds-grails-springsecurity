@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 
 import org.granite.context.GraniteContext;
+import org.granite.gravity.security.GravityInvocationContext;
 import org.granite.messaging.service.security.AbstractSecurityContext;
 import org.granite.messaging.webapp.HttpGraniteContext;
 import org.granite.spring.security.AbstractSpringSecurity3Interceptor;
@@ -22,6 +23,8 @@ import flex.messaging.messages.RemotingMessage;
 public class GrailsSpringSecurity3Interceptor extends AbstractSpringSecurity3Interceptor {
 	
 	public FilterInvocation buildFilterInvocation(AbstractSecurityContext securityContext) {
+		if (securityContext instanceof GravityInvocationContext)
+			return new SpringSecurity3GravityInvocationAdapter((GravityInvocationContext)securityContext);
 		return new SpringSecurity3FilterInvocationAdapter(securityContext);
 	}
 	
@@ -30,6 +33,23 @@ public class GrailsSpringSecurity3Interceptor extends AbstractSpringSecurity3Int
 		private HttpServletRequest wrappedRequest;
 		
 		public SpringSecurity3FilterInvocationAdapter(AbstractSecurityContext securityContext) {
+			super(((HttpGraniteContext)GraniteContext.getCurrentInstance()).getRequest(), 
+					((HttpGraniteContext)GraniteContext.getCurrentInstance()).getResponse(), new DummyChain());
+			
+			this.wrappedRequest = new SecurityRequestWrapper(((HttpGraniteContext)GraniteContext.getCurrentInstance()).getRequest(), securityContext);
+		}
+		
+		@Override
+		public HttpServletRequest getHttpRequest() {
+			return wrappedRequest;
+		}
+	}
+	
+	public static class SpringSecurity3GravityInvocationAdapter extends FilterInvocation {
+		
+		private HttpServletRequest wrappedRequest;
+		
+		public SpringSecurity3GravityInvocationAdapter(AbstractSecurityContext securityContext) {
 			super(((HttpGraniteContext)GraniteContext.getCurrentInstance()).getRequest(), 
 					((HttpGraniteContext)GraniteContext.getCurrentInstance()).getResponse(), new DummyChain());
 			
