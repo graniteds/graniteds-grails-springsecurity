@@ -1,32 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/graniteds/lib/org.springframework.beans.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/org.springframework.context.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/org.springframework.core.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/org.springframework.web.jar" sourcepath="C:/Users/william/.m2/repository/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/org.springframework.web.servlet.jar"/>
-	<classpathentry kind="lib" path="/graniteds/build/granite.jar" sourcepath="/graniteds/tide"/>
-	<classpathentry kind="lib" path="/graniteds/lib/org.springframework.aop.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-bootstrap-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-core-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-crud-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-docs-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-gorm-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-osgi-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-resources-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-scripts-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-spring-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-test-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-web-1.3.7.jar"/>
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-webflow-1.3.7.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/javax.servlet.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/spring-security-core-2.0.4.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/spring-security-core-tiger-2.0.4.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/spring-security-config-3.0.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/spring-security-core-3.0.jar" sourcepath="C:/Dev/sources/spring-security-core-3.0.5.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="/graniteds/lib/spring-security-web-3.0.jar"/>
-	<classpathentry kind="lib" path="/graniteds/build/granite-spring.jar" sourcepath="/graniteds/spring"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.m2/repository/org/jboss/spec/javax/servlet/jboss-servlet-api_3.0_spec/1.0.2.Final/jboss-servlet-api_3.0_spec-1.0.2.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.m2/repository/org/graniteds/granite-server-core/3.1.0.GA/granite-server-core-3.1.0.GA.jar" sourcepath="C:/Users/william/.m2/repository/org/graniteds/granite-server-core/3.1.0.GA/granite-server-core-3.1.0.GA-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.m2/repository/org/graniteds/granite-server-spring/3.1.0.GA/granite-server-spring-3.1.0.GA.jar" sourcepath="C:/Users/william/.m2/repository/org/graniteds/granite-server-spring/3.1.0.GA/granite-server-spring-3.1.0.GA-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.m2/repository/org/springframework/security/spring-security-web/3.2.5.RELEASE/spring-security-web-3.2.5.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/3.2.8.RELEASE/64b9b731decc74403eb85163278659d91c300584/spring-core-3.2.8.RELEASE.jar" sourcepath="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/3.2.8.RELEASE/f4c55592652e59ffdea9e37ee71998402050d11/spring-core-3.2.8.RELEASE-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/3.2.8.RELEASE/7aa7d1192ad7acc4b5ced07d44a1cdc4e3a377b9/spring-beans-3.2.8.RELEASE.jar" sourcepath="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/3.2.8.RELEASE/a5e9c73bc495c5a3f8bf79281cbb70116d45aa79/spring-beans-3.2.8.RELEASE-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/3.2.8.RELEASE/becdd45da4986fb6d8936188f90dc869b6c237a1/spring-expression-3.2.8.RELEASE.jar" sourcepath="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/3.2.8.RELEASE/2bd946d2fd53ca8774a107f54a9bce1098fbf140/spring-expression-3.2.8.RELEASE-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/3.2.8.RELEASE/90e7924ef58621a4c07c81279e013d9a11d41789/spring-aop-3.2.8.RELEASE.jar" sourcepath="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/3.2.8.RELEASE/4d721145f41cf94561dd73accfb47969ea2b98bc/spring-aop-3.2.8.RELEASE-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/3.2.8.RELEASE/7edfc6e4283b549504793682cab1f8c37d9f1890/spring-context-3.2.8.RELEASE.jar" sourcepath="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/3.2.8.RELEASE/97b8a68a61dd53b54202acdf9e612765805a8bea/spring-context-3.2.8.RELEASE-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.m2/repository/org/springframework/security/spring-security-core/3.2.5.RELEASE/spring-security-core-3.2.5.RELEASE.jar" sourcepath="C:/Users/william/.m2/repository/org/springframework/security/spring-security-core/3.2.5.RELEASE/spring-security-core-3.2.5.RELEASE-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/3.2.8.RELEASE/799ae0503da5a9f980fecd38c9e6b23a71a406c8/spring-web-3.2.8.RELEASE.jar" sourcepath="C:/Users/william/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/3.2.8.RELEASE/e15398d5111f79137a37e0b7de32e515debf3d2b/spring-web-3.2.8.RELEASE-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
