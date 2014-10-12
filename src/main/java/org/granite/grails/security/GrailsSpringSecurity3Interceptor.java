@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 
 import org.granite.context.GraniteContext;
 import org.granite.gravity.security.GravityInvocationContext;
+import org.granite.messaging.service.ServiceInvocationContext;
 import org.granite.messaging.service.security.AbstractSecurityContext;
 import org.granite.messaging.webapp.HttpGraniteContext;
 import org.granite.spring.security.AbstractSpringSecurity3Interceptor;
@@ -74,17 +75,18 @@ public class GrailsSpringSecurity3Interceptor extends AbstractSpringSecurity3Int
 		@Override
 		public String getRequestURI() {
 			Message message = securityContext.getMessage();
-			if (message instanceof RemotingMessage && "invokeComponent".equals(((RemotingMessage)message).getOperation())) {
+			if (securityContext instanceof ServiceInvocationContext && message instanceof RemotingMessage && "invokeComponent".equals(((RemotingMessage)message).getOperation())) {
 				Object[] body = (Object[])message.getBody();
 				String componentName = (String)body[0];
-				if (componentName.endsWith("Controller")) {
+				if (componentName != null && componentName.endsWith("Controller")) {
 					componentName = componentName.substring(0, componentName.length()-"Controller".length());
 					int idx = componentName.lastIndexOf('.');
 					if (idx > 0)
 						componentName = componentName.substring(idx+1);
+					
+					String methodName = (String)body[2];
+					return getContextPath() + "/" + componentName + "/" + methodName;
 				}
-				String methodName = (String)body[2];
-				return getContextPath() + "/" + componentName + "/" + methodName;
 			}
 			return super.getRequestURI();
 		}
