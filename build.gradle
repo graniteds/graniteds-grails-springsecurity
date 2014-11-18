@@ -22,8 +22,8 @@ configurations {
 
 dependencies {
 	compile 'org.jboss.spec.javax.servlet:jboss-servlet-api_3.0_spec:1.0.2.Final'
-	compile 'org.graniteds:granite-server-core:3.1.0.GA'
-	compile 'org.graniteds:granite-server-spring:3.1.0.GA'
+	compile 'org.graniteds:granite-server-core:3.1.1.GA'
+	compile 'org.graniteds:granite-server-spring:3.1.1.GA'
 	compile 'org.springframework.security:spring-security-web:3.2.5.RELEASE'
 }
 
